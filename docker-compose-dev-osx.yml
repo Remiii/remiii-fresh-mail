@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+    engine:
+        volumes:
+            - remiii_remiii-fresh-mail_rsync-sync:/home/docker:rw # will be mounted on /var/www
+            - remiii_remiii-fresh-mail_var_cache:/home/docker/var/cache
+            - remiii_remiii-fresh-mail_var_logs:/home/docker/var/logs
+            - remiii_remiii-fresh-mail_vendor:/home/docker/vendor
+
+volumes:
+    remiii_remiii-fresh-mail_rsync-sync:
+        external: true
+    remiii_remiii-fresh-mail_var_cache:
+    remiii_remiii-fresh-mail_var_logs:
+    remiii_remiii-fresh-mail_vendor:
